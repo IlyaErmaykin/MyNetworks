@@ -6,13 +6,14 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using MyNetworks.Models;
+using Duke.Owin.VkontakteMiddleware;
 
 namespace MyNetworks
 {
     public partial class Startup
     {
-        // Дополнительные сведения о настройке проверки подлинности см. по адресу: http://go.microsoft.com/fwlink/?LinkId=301864
-        public void ConfigureAuth(IAppBuilder app)
+		// Дополнительные сведения о настройке проверки подлинности см. по адресу: http://go.microsoft.com/fwlink/?LinkId=301864
+		public void ConfigureAuth(IAppBuilder app)
         {
             // Настройка контекста базы данных, диспетчера пользователей и диспетчера входа для использования одного экземпляра на запрос
             app.CreatePerOwinContext(ApplicationDbContext.Create);
@@ -54,15 +55,21 @@ namespace MyNetworks
 			//   consumerKey: "",
 			//   consumerSecret: "");
 
-
 			app.UseFacebookAuthentication(
-			   appId: "128085308107766",
-			   appSecret: "03b9340685a8247e7a0bc8db03b154dc");
+				appId: "128085308107766",
+				appSecret: "03b9340685a8247e7a0bc8db03b154dc");
 
 			app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
 			{
 				ClientId = "762338566105-dboa7lo0c8c3b9krjhtq1u63kbvfnehj.apps.googleusercontent.com",
 				ClientSecret = "Dtq-AnMxD9qq8iE1LVaOgwNf"
+			});
+
+			app.UseVkontakteAuthentication(new VkAuthenticationOptions()
+			{
+				AppId = "6782349",
+				AppSecret = "9kNAG89B6s1s4S9BEPux",
+				Scope = "email"
 			});
 		}
 	}
