@@ -118,3 +118,4 @@ C:\Users\LEX\Documents\Visual Studio 2015\Projects\TestLiteMarkcet\MyNetworks\My
 C:\Users\LEX\Documents\Visual Studio 2015\Projects\TestLiteMarkcet\MyNetworks\MyNetworks\obj\Debug\MyNetworks.csproj.GenerateResource.Cache
 C:\Users\LEX\Documents\Visual Studio 2015\Projects\TestLiteMarkcet\MyNetworks\MyNetworks\obj\Debug\MyNetworks.dll
 C:\Users\LEX\Documents\Visual Studio 2015\Projects\TestLiteMarkcet\MyNetworks\MyNetworks\obj\Debug\MyNetworks.pdb
+C:\Users\LEX\Documents\Visual Studio 2015\Projects\TestLiteMarkcet\MyNetworks\MyNetworks\obj\Debug\MyNetworks.csprojResolveAssemblyReference.cache

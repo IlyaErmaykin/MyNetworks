@@ -54,14 +54,15 @@ namespace MyNetworks
 			//   consumerKey: "",
 			//   consumerSecret: "");
 
-			//app.UseFacebookAuthentication(
-			//   appId: "",
-			//   appSecret: "");
+
+			app.UseFacebookAuthentication(
+			   appId: "128085308107766",
+			   appSecret: "03b9340685a8247e7a0bc8db03b154dc");
 
 			app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
 			{
-				ClientId = "762338566105-6d1pr4vv5a9bscv14rr9scg9chf5ejhu.apps.googleusercontent.com",
-				ClientSecret = "AkppA5HNnl42z-J_UQ33Hq2Q"
+				ClientId = "762338566105-dboa7lo0c8c3b9krjhtq1u63kbvfnehj.apps.googleusercontent.com",
+				ClientSecret = "Dtq-AnMxD9qq8iE1LVaOgwNf"
 			});
 		}
 	}
